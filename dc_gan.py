@@ -64,3 +64,17 @@ def build_dc_generator(noise_dim=100, batch_size=128):
         nn.Tanh(),
         Flatten()
     )
+
+def get_optimizer(model):
+    """
+    Construct and return an Adam optimizer for the model with learning rate 1e-3,
+    beta1=0.5, and beta2=0.999.
+    
+    Input:
+    - model: A PyTorch model that we want to optimize.
+    
+    Returns:
+    - An Adam optimizer for the model with the desired hyperparameters.
+    """
+    optimizer = optim.Adam(model.parameters(), lr = 1e-3, betas = (0.5,0.999))
+    return optimizer
