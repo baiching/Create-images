@@ -1,5 +1,7 @@
 import torch
 import torch.nn as nn
+from torch.nn import init
+from torch.autograd import Variable
 
 class Flatten(nn.Module):
     def forward(self, x):

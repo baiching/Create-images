@@ -4,6 +4,9 @@ from torch.utils.data import sampler
 import torchvision.datasets as dset
 import numpy as np
 
+import torchvision
+import torchvision.transforms as T
+
 from .chunkSampler import ChunkSampler
 
 def load_cifar():

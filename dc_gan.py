@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader
 from torch.utils.data import sampler
 import torchvision.datasets as dset
 
-from .helper import Flatten, Unflatten, initialize_weights
+from helper import Flatten, Unflatten, initialize_weights
 import numpy as np
 
 def build_dc_classifier(batch_size=128):
